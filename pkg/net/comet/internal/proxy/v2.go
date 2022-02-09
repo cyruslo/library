@@ -1,10 +1,10 @@
 package proxy
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bufio"
 	"bytes"
 	"encoding/binary"
 	"errors"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bufio"
 	"io"
 )
 

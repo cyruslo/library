@@ -1,9 +1,9 @@
 package comet
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bufio"
-	"git.huoys.com/middle-end/library/pkg/net/comet/proto"
 	"github.com/bilibili/kratos/pkg/log"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bufio"
+	"github.com/cyruslo/library/pkg/net/comet/proto"
 	gb "github.com/gogo/protobuf/proto"
 	"net"
 	"sync"

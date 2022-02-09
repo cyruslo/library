@@ -1,8 +1,8 @@
 package ring
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/errors"
-	"git.huoys.com/middle-end/library/pkg/net/comet/proto"
+	"github.com/cyruslo/library/pkg/net/comet/internal/errors"
+	"github.com/cyruslo/library/pkg/net/comet/proto"
 )
 
 // Ring ring proto buffer.

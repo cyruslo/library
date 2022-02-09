@@ -16,7 +16,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"git.huoys.com/middle-end/library/pkg/config/encoding"
+	"github.com/cyruslo/library/pkg/config/encoding"
 )
 
 const (

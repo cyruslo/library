@@ -1,8 +1,8 @@
 package round
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bytes"
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/time"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bytes"
+	"github.com/cyruslo/library/pkg/net/comet/internal/time"
 )
 
 // RoundOptions round options.

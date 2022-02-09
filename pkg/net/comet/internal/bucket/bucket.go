@@ -1,7 +1,7 @@
 package bucket
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/channel"
+	"github.com/cyruslo/library/pkg/net/comet/internal/channel"
 	"sync"
 )
 

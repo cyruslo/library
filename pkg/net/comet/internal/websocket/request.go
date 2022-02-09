@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bufio"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bufio"
 )
 
 // Request request.

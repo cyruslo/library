@@ -1,11 +1,11 @@
 package channel
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/ring"
+	"github.com/cyruslo/library/pkg/net/comet/internal/ring"
 	"sync"
 
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bufio"
-	"git.huoys.com/middle-end/library/pkg/net/comet/proto"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bufio"
+	"github.com/cyruslo/library/pkg/net/comet/proto"
 )
 
 // Channel used by message pusher send msg to write goroutine.

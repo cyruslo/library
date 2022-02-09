@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bufio"
 	"bytes"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bufio"
 	"net"
 	"strconv"
 	"strings"

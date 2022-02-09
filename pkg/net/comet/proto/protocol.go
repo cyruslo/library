@@ -4,8 +4,8 @@ import (
 	"errors"
 
 	"encoding/binary"
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/bufio"
-	"git.huoys.com/middle-end/library/pkg/net/comet/internal/websocket"
+	"github.com/cyruslo/library/pkg/net/comet/internal/bufio"
+	"github.com/cyruslo/library/pkg/net/comet/internal/websocket"
 )
 
 const (
