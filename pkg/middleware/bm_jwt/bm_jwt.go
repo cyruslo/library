@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/bilibili/kratos/pkg/ecode"
+	"github.com/golang-jwt/jwt/v5"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -12,7 +13,6 @@ import (
 	"time"
 
 	bm "github.com/bilibili/kratos/pkg/net/http/blademaster"
-	"github.com/dgrijalva/jwt-go"
 )
 
 // MapClaims type that uses the map[string]interface{} for JSON decoding
@@ -592,8 +592,7 @@ func (mw *BMJWTMiddleware) CheckIfTokenExpire(c *bm.Context) (jwt.MapClaims, err
 		// If the error is just ValidationErrorExpired, we want to continue, as we can still
 		// refresh the token if it's within the MaxRefresh time.
 		// (see https://github.com/appleboy/gin-jwt/issues/176)
-		validationErr, ok := err.(*jwt.ValidationError)
-		if !ok || validationErr.Errors != jwt.ValidationErrorExpired {
+		if err != jwt.ErrTokenExpired {
 			return nil, err
 		}
 	}
@@ -618,8 +617,7 @@ func (mw *BMJWTMiddleware) GetOldTokenClaims(c *bm.Context) (jwt.MapClaims, erro
 		// If the error is just ValidationErrorExpired, we want to continue, as we can still
 		// refresh the token if it's within the MaxRefresh time.
 		// (see https://github.com/appleboy/gin-jwt/issues/176)
-		validationErr, ok := err.(*jwt.ValidationError)
-		if !ok || validationErr.Errors != jwt.ValidationErrorExpired {
+		if err != jwt.ErrTokenExpired {
 			return nil, err
 		}
 	}

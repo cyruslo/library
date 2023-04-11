@@ -5,7 +5,7 @@ import (
 	"crypto/rsa"
 	"errors"
 	"fmt"
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt/v5"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
@@ -440,8 +440,7 @@ func (wj *WardenJWT) CheckIfTokenExpire(ctx context.Context) (jwt.MapClaims, err
 		// If the error is just ValidationErrorExpired, we want to continue, as we can still
 		// refresh the token if it's within the MaxRefresh time.
 		// (see https://github.com/appleboy/gin-jwt/issues/176)
-		validationErr, ok := err.(*jwt.ValidationError)
-		if !ok || validationErr.Errors != jwt.ValidationErrorExpired {
+		if err != jwt.ErrTokenExpired {
 			return nil, err
 		}
 	}
